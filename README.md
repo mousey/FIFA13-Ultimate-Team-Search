@@ -1,14 +1,12 @@
-![FIFA12 Ultimate Team Search](http://i.imgur.com/gUxon.png)
+![FIFA13 Ultimate Team Search](http://i.imgur.com/gUxon.png)
 
-# FIFA12 Ultimate Team Search
+# FIFA13 Ultimate Team Search
 
-Having found [pmzipko's](http://pastebin.com/Zu5uDP7X) code to access the EA FIFA Web APP for FIFA11 I've taken a stab at updating it for FIFA12
+Having found [pmzipko's](http://pastebin.com/Zu5uDP7X) code to access the EA FIFA Web APP for FIFA11 and then writting a wrapper for FIFA12. 
+I thought I'd update the code to work with EA's latest and greatest FIFA13
 
 ## Files
 * Connector.php  = Creates a connection to the EA Web App Server.
-* Searchor.php   = Searches the database for the players/staff requested.
-* Tradeor.php    = Bid on items and view Trade details.
-* Functionor.php = Random functions used to return player/staff info and other things.
 * Eahashor.php   = Returns the hash value of the secret question answer supplied
 
 ## External Files
