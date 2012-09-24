@@ -34,13 +34,15 @@ class Tradeor {
 		$cookie_string = $this->EASW_KEY."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
 		//Setup cURL HTTP request
 		$ch = curl_init($bidurl);                                                                      
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                                                                                     
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string); 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 		curl_setopt($ch, CURLOPT_COOKIE, $cookie_string); 
 		curl_setopt($ch, CURLOPT_HEADER, false);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
 			'Content-Type: application/json',                                                                                
 			'x-http-method-override: PUT',
+			'Content-Length: ' . strlen($data_string),
 			$this->XSID)                                                                       
 		);
 		
