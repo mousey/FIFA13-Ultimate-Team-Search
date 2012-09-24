@@ -7,6 +7,9 @@ I thought I'd update the code to work with EA's latest and greatest FIFA13
 
 ## Files
 * Connector.php  = Creates a connection to the EA Web App Server.
+* Searchor.php   = Searches the database for the players/staff requested.
+* Tradeor.php    = Bid on items and view Trade details.
+* Functionor.php = Random functions used to return player/staff info and other things.
 * Eahashor.php   = Returns the hash value of the secret question answer supplied
 
 ## External Files

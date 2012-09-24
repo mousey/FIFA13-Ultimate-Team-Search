@@ -1,23 +1,7 @@
 <?php  
-/**
-* @llygoden
-* @author - Rob McGhee
-* @URL - www.robmcghee.com
-* @date - 20/09/12
-* @version - 1.0
-**/
+echo MD("password");
 
-/*	EA are using the same Hashing algorithm as in FIFA 12
-
-/* 	This is EAs implementation of the MD5 hashing algorithm
-*	It's identical to the standard MD5 algorithm apart from two changes
-*	Line 62 - uses 14 instead of 16 for the shift value
-*	Line 96 - they do the last II function twice on 'b' where MD5 only does it once
-*	I'm not sure if these are intentional changes
-*	or just errors when copy pasting by a programmer
-*/
-
-function hash($string){ 
+function MD($string){ 
 	$a = "67452301"; 
 	$b = "EFCDAB89"; 
 	$c = "98BADCFE"; 
@@ -71,8 +55,7 @@ function hash($string){
 		HH ($A, $B, $C, $D, $words[5 + ($i * 16)], 4, "fffa3942");          
 		HH ($D, $A, $B, $C, $words[8 + ($i * 16)], 11, "8771f681");          
 		//HH ($C, $D, $A, $B, $words[11 + ($i * 16)], 16, "6d9d6122");
-		//MD5 would have used the line above here EA use the line below
-		//EA change the function to use 14 rather than 16 
+		//EA change to use 14 rather than 16 as seen in the commented line
 		HH ($C, $D, $A, $B, $words[11 + ($i * 16)], 14, "6d9d6122");
 		HH ($B, $C, $D, $A, $words[14 + ($i * 16)], 23, "fde5380c");          
 		HH ($A, $B, $C, $D, $words[1 + ($i * 16)], 4, "a4beea44");          
@@ -105,8 +88,7 @@ function hash($string){
 		II ($D, $A, $B, $C, $words[11 + ($i * 16)], 10, "bd3af235");          
 		II ($C, $D, $A, $B, $words[2 + ($i * 16)], 15, "2ad7d2bb");          
 		II ($B, $C, $D, $A, $words[9 + ($i * 16)], 21, "eb86d391");
-		//MD5 would finish on the line above
-		//EA change this and use this last line twice
+		//EA change to use this last line twice
 		II ($B, $C, $D, $A, $words[9 + ($i * 16)], 21, "eb86d391");
 		
 		addVars($a, $b, $c, $d, $A, $B, $C, $D);         
@@ -119,7 +101,7 @@ function hash($string){
 	}          
 
 	return $MD5; 
-}
+}  
 
 /* General functions */  
 function hexbin($str){         
@@ -151,7 +133,8 @@ function hexbin($str){
 		$bin .= $hexbinmap[$str[$i]];     
 	}     
 
-	$bin = ltrim($bin, '0');            
+	$bin = ltrim($bin, '0');          
+	// echo "Original: ".$str."  New: ".$bin."<br />";     
 	return $bin; 
 }  
 
