@@ -3,8 +3,8 @@
 * @llygoden
 * @author - Rob McGhee
 * @URL - www.robmcghee.com
-* @date - 12/06/12
-* @version - 2.0
+* @date - 20/09/12
+* @version - 1.0
 **/
 class Connector {
 	
