@@ -31,7 +31,7 @@ class Tradeor {
 		$data = array("bid" => $value);
 		$data_string = json_encode($data); 
 		//Set the cookie data
-		$cookie_string = $this->EASW_KEY."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
+		$cookie_string = $this->EASW_KEY ."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
 		//Setup cURL HTTP request
 		$ch = curl_init($bidurl);                                                                      
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -60,7 +60,7 @@ class Tradeor {
 		$tradeurl = "https://utas.fut.ea.com/ut/game/fifa13/trade?tradeIds=". $trade;
 
 		//Set the cookie data
-		$cookie_string = $this->EASW_KEY."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
+		$cookie_string = $this->EASW_KEY ."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
 		//Setup cURL HTTP request
 		$ch = curl_init($tradeurl);                                                                      
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                                                                                     
@@ -77,7 +77,7 @@ class Tradeor {
 		$EATRADE = curl_exec($ch);
 		curl_close($ch);
 		
-		unset($ch, $cookie_string $trade, $tradeurl);
+		unset($ch, $cookie_string, $trade, $tradeurl);
 		
 		return $EATRADE;
 	}
