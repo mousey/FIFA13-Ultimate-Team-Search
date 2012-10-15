@@ -91,7 +91,7 @@ class Functionor {
 	//returns the JSON file containing how many coins your account has to spend	
 	public function credits($EASW_KEY, $EASF_SESS, $PHISHKEY, $XSID){
 		//URL to retrieve credits
-		$creditsurl = "https://utas.fut.ea.com/ut/game/fifa13/user/credits";
+		$creditsurl = "https://utas.s2.fut.ea.com/ut/game/fifa13/user/credits";
 		
 		//Set the cookie data
 		$cookie_string = $EASW_KEY."; ".$EASF_SESS ."; ".$PHISHKEY;                                                                       
