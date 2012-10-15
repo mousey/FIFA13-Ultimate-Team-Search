@@ -25,7 +25,7 @@ class Tradeor {
 	//$value is the value in FIFA coins that you want to BID
 	public function bid($trade, $value){
 		//URL to bid on trade items
-		$bidurl = "https://utas.fut.ea.com/ut/game/fifa13/trade/". $trade ."/bid";
+		$bidurl = "https://utas.s2.fut.ea.com/ut/game/fifa13/trade/". $trade ."/bid";
 		
 		//JSON data to send as a POST item
 		$data = array("bid" => $value);
@@ -57,7 +57,7 @@ class Tradeor {
 	
 	public function trade($trade){
 		//URL to view trade details
-		$tradeurl = "https://utas.fut.ea.com/ut/game/fifa13/trade?tradeIds=". $trade;
+		$tradeurl = "https://utas.s2.fut.ea.com/ut/game/fifa13/trade?tradeIds=". $trade;
 
 		//Set the cookie data
 		$cookie_string = $this->EASW_KEY ."; ".$this->EASF_SESS ."; ".$this->PHISHKEY;                                                                       
