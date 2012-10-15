@@ -95,7 +95,7 @@ class Connector {
 		
 		//Get machine type
 		$d = json_decode($EAACCOUNT);
-		$machine = $d->shardInfo[0]->customdata1[0];
+		$machine = $d->shardInfo[1]->customdata1[1];
 		
 		//display the variables we've got
 		//echo "machine: ".$machine."<br />";
