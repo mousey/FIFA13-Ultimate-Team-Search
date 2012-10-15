@@ -23,7 +23,8 @@ class Searchor {
 	
 	public function playersearch($start = 0,$count = 15,$level,$formation,$position,$nationality,$league,$team,$minBid,$maxBid,$minBIN,$maxBIN){
 		//URL to search for items
-		$searchurl = "https://utas.fut.ea.com/ut/game/fifa13/auctionhouse?";
+		$searchurl = "https://utas.s2.fut.ea.com/ut/game/fifa13/auctionhouse?";
+
 		//String that holds our search variables
 		$searchstring = "";
 		
