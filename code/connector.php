@@ -59,11 +59,11 @@ class Connector {
 		$r = explode("\r\n", $h);
 		
 		//EASW Key
-		$s = explode(":", $r[7]);
+		$s = explode(":", $r[10]);
 		$t = explode(";", $s[1]);
 		$EASW_KEY = $t[0]; 
 		//Session Key
-		$m = explode(":", $r[8]);
+		$m = explode(":", $r[11]);
 		$n = explode(";", $m[1]);
 		$EASF_SESS = $n[0];
 		//nuc
@@ -95,7 +95,7 @@ class Connector {
 		
 		//Get machine type
 		$d = json_decode($EAACCOUNT);
-		$machine = $d->shardInfo[0]->customdata1[0];
+		$machine = $d->shardInfo[1]->customdata1[1];
 		
 		//display the variables we've got
 		//echo "machine: ".$machine."<br />";
