@@ -59,11 +59,11 @@ class Connector {
 		$r = explode("\r\n", $h);
 		
 		//EASW Key
-		$s = explode(":", $r[7]);
+		$s = explode(":", $r[10]);
 		$t = explode(";", $s[1]);
 		$EASW_KEY = $t[0]; 
 		//Session Key
-		$m = explode(":", $r[8]);
+		$m = explode(":", $r[11]);
 		$n = explode(";", $m[1]);
 		$EASF_SESS = $n[0];
 		//nuc
